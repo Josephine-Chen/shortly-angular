@@ -5,4 +5,7 @@ angular.module('shortly.navigation', [])
     Auth.signout();
   };
 
+  $scope.isAuth = function(){
+    return Auth.isAuth();
+  }
 });
