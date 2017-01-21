@@ -3,29 +3,29 @@ angular.module('shortly.services', [])
 .factory('Links', function ($http) {
   // add getAll method
   var getAll = function () {
-  return $http({
-    method: 'GET',
-    url: '/api/links'
-  }).then(function (resp) {
+    return $http({
+      method: 'GET',
+      url: '/api/links'
+    }).then(function (resp) {
       return resp.data;
     });
   };
 
   var addOne = function (link) {
-  return $http({
-    method: 'POST',
-    url: '/api/links',
-    data: link
-  }).then(function(resp) {
-    console.log("thisisresp",resp);
-    return resp;
-  });
-};
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      data: link
+    }).then(function(resp) {
+      console.log(resp);
+      return resp;
+    });
+  };
 
   return {
     getAll: getAll,
     addOne: addOne
-  }
+  };
 })
 
 .factory('Auth', function ($http, $location, $window) {

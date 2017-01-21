@@ -4,6 +4,6 @@ angular.module('shortly.shorten', [])
   $scope.link = {};
 
   $scope.addLink = function(link) {
-    Links.addOne($scope.link).then().catch(function(err){console.log("There was an error")});
+    Links.addOne($scope.link).then().catch(function(err) { console.log('There was an error'); });
   };
 });

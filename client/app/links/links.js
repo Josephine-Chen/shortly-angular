@@ -9,6 +9,5 @@ angular.module('shortly.links', [])
       console.log('error getting scope data links', err);
     });
   }();
-  //$scope.getAll();
 
 });
